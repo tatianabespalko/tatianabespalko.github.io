@@ -14,3 +14,8 @@ week2c = d2.cweek               # 17
 Time
 t0 = Time.new
 Time.now: t0 = Time.now
+
+
+# require 'date'
+# 2.2.1 :003 > Date.new(2016,3,15).cweek
+# => 11 

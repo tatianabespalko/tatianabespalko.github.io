@@ -1,30 +1,65 @@
 class Employee
-	attr_reader :name, :salary
+	attr_reader :name#, :salary
 	def name=(name)
+		# Код проверки и присваивания @name
 		if name == ""
-			raise "Name can't be blank!" # Если имя остается пустым, вывести сообщение об ошибке.
+		raise "Name can't be blank!" # Если имя остается пустым, вывести сообщение об ошибке.
 		end
 		@name = name # Cохранить имя в переменной екземпляра
 	end
+	def print_name
+		puts "Name: #{name}"
+	end
+end
+class SalariedEmployee < Employee
+	attr_reader :salary
 	def salary=(salary)
+		# Код проверки и присваивания @salary
 		if salary < 0 # Вывести сообщение ошибке если годовой доход отрицателен
 			raise "A salary of #{salary} isn't valid!"
 		end
 		@salary = salary
 	end
-	def initialize (name = "Anonymous", salary = 0.0)
-		self.name = name # присваивает значение переменной экземпляра @name
-		self.salary = salary # Присваивает значение ПЭ @salary
-	end
 	def print_pay_stub
-		#p @name, @salary
-		#puts "Name: #{@name}" # Вывести имя работника.
-		puts "Name: #{self.name}"
-		pay_for_period = (@salary / 365.0) * 14 # вычислить 14-дневную часть оклада работника.
-		formatted_pay = format("%.2f", pay_for_period) # Получение строки с денежной суммой, округленной до двух цифр в дробной части 
-		puts "Pay This Period: $#{formatted_pay}" # Вывести начисленную сумму (отформатированная) 
+		print_name
+		pay_for_period = hourly_wage * hours_per_week * 2
+		formatted_pay = format("$%.2f", pay_for_period)
+		puts "Pay This Period: #{formatted_pay}"
 	end
 end
+class HourlyEmployee < Employee
+	attr_reader :hourly_wage, :hours_per_week
+	def hourly_wage=(hourly_wage) # Код проверки и присваивания @hourly_wage
+		@hourly_wage = hourly_wage
+	end
+	def hours_per_week=(hours_per_week)
+	# Код проверки и присваивания @hours_per_week
+	    @hours_per_week = hours_per_week
+	end
+end
+
+	#def print_pay_stub
+	#		print_name
+	#		pay_for_period =(salary/365.0) * 14 # вычислить 14-дневную часть оклада работника.
+	#		formatted_pay = format("%.2f", pay_for_period) # Получение строки с денежной суммой, округленной до двух цифр в дробной части 
+	#		puts "Pay This Period: $#{formatted_pay}" # Вывести начисленную сумму (отформатированная)
+	#	end
+	#end
+
+	#def initialize (name = "Anonymous", salary = 0.0)
+		#self.name = name # присваивает значение переменной экземпляра @name
+		#self.salary = salary # Присваивает значение ПЭ @salary
+	#end
+	#def print_pay_stub
+		#p @name, @salary
+		#puts "Name: #{@name}" # Вывести имя работника.
+		#puts "Name: #{self.name}"
+		#pay_for_period = (@salary / 365.0) * 14 # вычислить 14-дневную часть оклада работника.
+		#formatted_pay = format("%.2f", pay_for_period) # Получение строки с денежной суммой, округленной до двух цифр в дробной части 
+		#puts "Pay This Period: $#{formatted_pay}" # Вывести начисленную сумму (отформатированная) 
+	#end
+
+
 
 #amy = Employee.new
 #amy.name = "Amy Blake"
@@ -45,7 +80,19 @@ end
 #Employee.new("Jane Doe", 50000).print_pay_stub
 #Employee.new("Jane Doe").print_pay_stub
 #Employee.new.print_pay_stub
-Employee.new("Amy Blake", 50000).print_pay_stub
+#Employee.new("Amy Blake", 50000).print_pay_stub
 #kara = Employee.new
 #employee = Employee.new("", -246)
-#employee.print_pay_stu
+#employee.print_pay_stub
+
+# наследование начало
+#salaried_employee = SalariedEmployee.new
+#salaried_employee.name = "Jane Doe"
+#salaried_employee.salary = 50000
+#salaried_employee.print_pay_stub
+
+hourly_employee = HourlyEmployee.new
+hourly_employee.name = "John Smith"
+hourly_employee.hourly_wage = 14.97
+hourly_employee.hours_per_week = 30
+hourly_employee.print_pay_stub
