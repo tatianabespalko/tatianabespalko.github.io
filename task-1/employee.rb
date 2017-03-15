@@ -18,7 +18,8 @@ class Employee
 	end
 	def print_pay_stub
 		#p @name, @salary
-		puts "Name: #{@name}" # Вывести имя работника.
+		#puts "Name: #{@name}" # Вывести имя работника.
+		puts "Name: #{self.name}"
 		pay_for_period = (@salary / 365.0) * 14 # вычислить 14-дневную часть оклада работника.
 		formatted_pay = format("%.2f", pay_for_period) # Получение строки с денежной суммой, округленной до двух цифр в дробной части 
 		puts "Pay This Period: $#{formatted_pay}" # Вывести начисленную сумму (отформатированная) 
@@ -33,14 +34,18 @@ end
 # ben = Employee.new
 # ben.salary = -246
 #amy.print_pay_stub # нет центов/ т.е. нет дробной части
-employee = Employee.new("Amy Blake", 50000)
-employee.print_pay_stub
+#employee = Employee.new("Amy Blake", 50000)
+#employee.print_pay_stub
+# employee = Employee.new("", 50000)  - нет пустых имен
+# employee = Employee.new("Amy Blake", -50000) - нет отрицательных значений
 # employee.name = "Jane Doe"
 # employee.salary = 50000
-# employee.print_pay_stub
+#employee = Employee.new("", -50000)
+#employee.print_pay_stub
 #Employee.new("Jane Doe", 50000).print_pay_stub
 #Employee.new("Jane Doe").print_pay_stub
 #Employee.new.print_pay_stub
+Employee.new("Amy Blake", 50000).print_pay_stub
 #kara = Employee.new
 #employee = Employee.new("", -246)
-#employee.print_pay_stubs
+#employee.print_pay_stu
