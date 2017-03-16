@@ -126,10 +126,10 @@ end
 #hourly_employee.hours_per_week = 30
 #hourly_employee.print_pay_stub
 
-salaried_employee = SalariedEmployee.new("Jane Doe", 50000)
-salaried_employee.print_pay_stub
-hourly_employee = HourlyEmployee.new("John Smith", 14.97, 30)
-hourly_employee.print_pay_stub
+#salaried_employee = SalariedEmployee.new("Jane Doe", 50000)
+#salaried_employee.print_pay_stub
+#hourly_employee = HourlyEmployee.new("John Smith", 14.97, 30)
+#hourly_employee.print_pay_stub
 
 jane = SalariedEmployee.new("Jane Doe", 50000)
 jane.print_pay_stub
