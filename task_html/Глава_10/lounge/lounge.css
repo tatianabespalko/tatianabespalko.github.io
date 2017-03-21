@@ -9,15 +9,12 @@ h1, h2 {
 h1 {
 	font-size: 150%;
 }
-p {
+h2 {
 	font-size: 130%;
 }
-
 .guaran {
 	border-color: black;
 	border-width: 1px;
 	border-style: solid;
 	background-color: #a7cece;
-	padding: 25px;
-	margin: 30px;
 }
