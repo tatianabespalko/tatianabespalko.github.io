@@ -1,16 +1,21 @@
 body {
-	font-family: Verdana, Arial, sans-serif;
+	font-size: small;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	line-height: 1.6em;
 }
 h1, h2 {
-	color: gray;
+	color: #007e7e;
 }
 h1 {
-	border-bottom: 1px solid black;
+	font-size: 150%;
 }
 p {
-	color: maroon;
+	font-size: 130%;
 }
 
-p.greentea { color: green; }
-p.raspberry { color: blue; }
-p.blueberry { color: purple; }
+.guarantee {
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #a7cece;
+}
