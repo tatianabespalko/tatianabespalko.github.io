@@ -1,0 +1,10 @@
+#pic{
+    float: left;
+    margin: 0 20px 0 0px;
+}
+
+.picBorder {	
+  background-color: #fff;
+  padding: 30px 100px;
+  border: #00425E solid 1px;
+}

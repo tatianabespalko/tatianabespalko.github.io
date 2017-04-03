@@ -1,0 +1,10 @@
+#rectangle{
+    float: left;
+    margin: 0 20px 0 0px;
+}
+
+.picBorder {	
+  background-color: #fff;
+  padding: 20px;
+  border: #00425E solid 1px;
+}
