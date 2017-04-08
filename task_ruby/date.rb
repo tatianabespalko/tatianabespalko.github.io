@@ -1,7 +1,7 @@
 require "date"
 # Посмотрим, в какую неделю попадает 1 мая в 2002 и 2005 годах.
-t1 = Time.local(2016,3,13)
-d1 = Date.new(2016,3,13)
+t1 = Time.local(2016,04,1)
+d1 = Date.new(2016,04,1)
 week1a = t1.strftime("%U").to_i # 11
 week1b = t1.strftime("%W").to_i # 11
 week1c = d1.cweek #10
