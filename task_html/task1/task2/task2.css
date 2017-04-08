@@ -1,0 +1,13 @@
+#pic{
+    position:fixed;
+    top: 20px;
+    right: 140px;
+    width: 280px;
+    margin: 0 20px 0 0px;
+}
+
+.picBorder {	
+  background-color: #fff;
+  padding: 300px 200px;
+  border: #00425E solid 1px;
+}
