@@ -13,21 +13,20 @@ puts "The number is " + a
 
 # одна змінна з масивом
 b = []
-#last = a.size
-#last.times{|i| b << a[i].to_i }
-elem = a.size
-array.find_all{ |elem| elem.even? }
-array.find_all{ |elem| elem.odd? }
+last = a.size
+last.times{|i| b << a[i].to_i }
 
 # що проходить по елементам з однією змінною масиву each 
-#c = 0
+c = 0
 #b.each do |d|
 #	c += d
 #end
-
+p (1..10).find_all { |number| number.odd? }
+p (1..10).find_all { |number| number.even? }
 
 
 
 # вивести в термінал
-puts "The sum of its digits is"
-puts c
+puts "The odd numbers is "
+puts "The even numbers is "
+ 
