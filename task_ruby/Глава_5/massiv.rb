@@ -54,12 +54,12 @@ def refund(prices)
 	#index = 0
 	prices.each do |price|
 	#while index < prices.length
-		amount -= prices
+	amount -= price
 	#	index += 1 
 	end
 	amount
 end
-end
+
 
 #prices = [3.99, 25.00, 8.99]
 
