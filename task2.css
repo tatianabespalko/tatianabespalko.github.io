@@ -1,6 +1,6 @@
 div.first {
   width: 35%;
-  height: 900px;
+  height: 1200px;
   background-color: silver;
   padding: 0 0 50px 20px;
   border: #00425E solid 1px;
@@ -10,7 +10,7 @@ div.first {
   top: 10px;
   right: 10px;
   color: #000080;
-  line-height: 12px;
+  line-height: 15px;
   }
 
  li {
