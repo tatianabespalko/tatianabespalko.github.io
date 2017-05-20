@@ -1,16 +1,17 @@
 div.first {
   width: 35%;
-  height: 555px;
+  height: 900px;
   background-color: silver;
   padding: 0 0 50px 20px;
   border: #00425E solid 1px;
   border-radius: 10px;
   margin: 0 20px 20 0px;
-  position:fixed;
+  position:absolute;
   top: 10px;
   right: 10px;
   color: #000080;
- }
+  line-height: 12px;
+  }
 
  li {
   padding-top: 0px;
