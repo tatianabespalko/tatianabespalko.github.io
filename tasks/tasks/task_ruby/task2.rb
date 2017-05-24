@@ -12,21 +12,22 @@ a = gets
 puts "The number is " + a
 
 # одна змінна з масивом
-b = []
-last = a.size
-last.times{|i| b << a[i].to_i }
+enum.all? [{ |obj| block } ]
+enum.find_all { | obj | block }
+(1..10).find_all {|i|  i % 3 == 0 }
+
+#array.find_all{ |elem| elem % 2 == 0 }
 
 # що проходить по елементам з однією змінною масиву each 
-c = 0
 #b.each do |d|
 #	c += d
 #end
-p (1..10).find_all { |number| number.odd? }
-p (1..10).find_all { |number| number.even? }
+#p (1..10).find_all { |number| number.odd? }
+#p (1..10).find_all { |number| number.even? }
 
 
 
 # вивести в термінал
-puts "The odd numbers is "
+#puts "The odd numbers is "
 puts "The even numbers is "
  
