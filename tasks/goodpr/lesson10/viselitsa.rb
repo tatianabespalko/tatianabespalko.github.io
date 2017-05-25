@@ -10,7 +10,7 @@ bad_letters = []
 good_letters = []
 
 while errors < 7 do #while (ошибок меньше 7) do ... end
-	print_status(letters, good_letters, bad_letters) # todo имя_метода(параметр1, параметр2, ...)
+	print_status(letters, good_letters, bad_letters, errors) # todo имя_метода(параметр1, параметр2, ...)
 	puts "введите следующую букву"
 
 	user_input = get_user_input #todo
