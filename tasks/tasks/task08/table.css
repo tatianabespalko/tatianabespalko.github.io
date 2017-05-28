@@ -1,0 +1,19 @@
+td, th {border: 1px solid black;
+	border-color: silver;
+}
+
+th {
+	background-color: #c0c0c0;
+}
+th.clear {
+   border-style: none;
+   background-color: white;
+}
+td.silver {
+	background-color: #c0c0c0;
+	width: 10%;
+	height: 10%;
+}
+td.clear {
+	border-style: none;
+}
