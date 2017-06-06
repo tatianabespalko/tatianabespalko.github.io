@@ -12,8 +12,26 @@ th.clear {
 td.silver {
 	background-color: #c0c0c0;
 	width: 10%;
-	height: 10%;
+	height: 3em;
 }
 td.clear {
 	border-style: none;
+}
+
+td.nsilver {
+	background-color: #FAFAFA;
+	width: 13.5em;
+	height: 6em;
+}
+
+td.nsilver1 {
+	background-color: #FAFAFA;
+	width: 13.5em;
+	height: 3em;
+	
+}
+th.clear1 {
+	border-style: none;
+	width: 18%;
+	height: 3em;
 }
