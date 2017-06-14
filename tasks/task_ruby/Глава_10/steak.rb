@@ -10,6 +10,8 @@ first_steak.grade = "Prime"
 second_steak = Steak.new
 second_steak.grade = "Choice"
 
+
 if first_steak > second_steak
 	puts "I'll take #{first_steak.inspect}."
 end
+

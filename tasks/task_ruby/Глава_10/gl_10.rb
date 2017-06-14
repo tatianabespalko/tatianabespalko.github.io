@@ -1,4 +1,5 @@
 class Steak
+
 	attr_accessor :grade
 	
 	def >(other)
