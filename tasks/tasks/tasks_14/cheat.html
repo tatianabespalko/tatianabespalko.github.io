@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Шпаргалка</title>
+
+</head>
+<body>
+
+<h2>Консоль (командна строка або термінал) - це ще один спосіб взаємодії з комп'ютером.</h2>
+<h2>Для різних операційних систем початок роботи з терміналом відрізняється:</h2>
+<h4><i>Windows:</i> Відкрийте меню "Пуск" і в командному рядку виберіть команду execute та введіть cmd.</h4>
+<h4><i>Mac:</i> Відкрийте Spotlight, тип термінал і відкрийте програму.</h4>
+<h4><i>Linux:</i> Знаходиться в головному меню або в розділі аксесуари.</h4>
+<table border="1" width="100%" cellpadding="1">
+   <tr>
+    <th>Концепція</th>
+    <th>Використання</th>
+    <th>Приклади</th>
+    <th>Опис</th>
+   </tr>
+   <tr>
+    <td align="center">Зміна каталогу</td>
+    <td align="center">cd directory</td>
+    <td align="center"><p>cd my_app</p><p>cd my_app/app/controllers</p></td>
+    <td>Змінює каталог на вказаний.</td>
+   </tr>
+  <tr>
+    <td align="center">Список вмісту каталогу</td>
+    <td align="center"><p>ls directory</p><p>Windows: dir directory</p></td>
+    <td align="center"><p>ls</p><p>ls my_app</p></td>
+    <td>Показує весь вміст (файли та папки) каталогу. Якщо не вказано жодного каталогу, відображається вміст поточного каталогу.</td>
+   </tr>
+  <tr>
+    <td align="center">Каталог, в якому Ви зараз знаходитесь</td>
+    <td align="center">pwd</td>
+    <td align="center">pwd</td>
+    <td>Показує повний шлях до каталогу, в якому Ви знаходитесь. Наприклад, /home/tobi/railsgirls. Примітка: якщо ім'я файлу або каталогу починається з слешу (/) - це абсолютне або повне ім'я файлу. Якщо слеша немає (/) - ім'я файлу є відносно поточного робочого каталогу.
+    </td>
+   </tr>
+   <tr>
+    <td align="center">Створити новий каталог</td>
+    <td align="center">mkdir name</td>
+    <td align="center"><p>mkdir rails</p><p>mkdir fun</p></td>
+    <td>Створює каталог з ім'ям у папці, в якій Ви перебуваєте.
+    </td>
+   </tr>
+   <tr>
+    <td align="center">Видалити файл</td>
+    <td align="center"><p>rm file</p><p>Windows: del file</p></td>
+    <td align="center"><p>rm foo</p><p>rm index.html</p><p>rm pictures/old_picture.jpg</p></td>
+    <td><p>Видаляє вказаний файл. Будьте обережні, щоб не видалити необхідні Вам файли/p>
+    <p>Можна вказати назву файлу каталогу, в якому Ви перебуваєте. Також можна вказати шлях, як у третьому прикладі (видаляється файл з папки зображень).</p>
+    </td>
+   </tr>
+   <tr>
+    <td align="center">Видалити каталог</td>
+    <td align="center"><p>rm -r folder</p><p>Windows: rd folder</p></td>
+    <td align="center"><p>rm -r stuff_i_dont_need</p><p>rm -r stuff_i_dont_need/</p><p>rm -r old_application</p></td>
+    <td><p>Видаляє вказану папку та весь її вміст.</p></td>
+   </tr>
+   <tr>
+    <td align="center">Запуск програми</td>
+    <td align="center"><p>program arguments</p></td>
+    <td align="center"><p>firefox</p><p>firefox railsgirlsberlin.de</p><p>irb</p></td>
+    <td><p>Запускає програму з даними і аргументами.</p></td>
+   </tr>
+   <tr>
+    <td align="center">Передчасне завершення програми</td>
+    <td align="center"><p>Press Ctrl + C</p></td>
+    <td align="center"><p>-</p></td>
+    <td><p>Це призведе до скасування програми, яка зараз працює в терміналі.</p></td>
+   </tr>
+    
+</body>
+</html>
+
