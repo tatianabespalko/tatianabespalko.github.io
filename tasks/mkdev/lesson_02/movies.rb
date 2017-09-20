@@ -16,19 +16,27 @@
 #   - Константы — это «переменные», чье значение не изменяется, а имя начинается с заглавной литеры
 
 # Считать из файла все фильмы
+
+input = ARGV.join
+filename = "movies.txt"
+
 lines = []
-File.open("movies.txt") do |review_file|
-	#review_file = File.open("movies.txt") 
-	lines = review_file.readlines
+File.open("movies.txt") do |movie_file|
+	review_file = File.open("movies.txt") 
+	lines = movie_file.readlines
+	
 end
 
 # Вывести названия и рейтинг всех фильмов, в названии которых есть слово "Max"
-relevant_lines = lines.find_all { |line| line.include?("Max") }
+#string = movie_file.first
+#words = string.split("|")
+
+#relevant_lines = lines.find_all { |line| line.include?("Max") }
 
 
+#p words
 
-
-#reviews = relevant_lines.reject { |line| line.except?["Maxim", "Max von"] }
+#reviews = relevant_lines.reject { |line| line.except?["Maxim"] }
 #names  = reviews.map do |review|
 #	name = find_name(review)
 #end
@@ -43,5 +51,36 @@ relevant_lines = lines.find_all { |line| line.include?("Max") }
 #	end
 #end
 
-p relevant_lines
+#p relevant_lines
 
+@movies = {}
+lines.each do |value|
+  	value = value.split("|")
+  	@movies[value[1]] =
+	  	{ link: value[0],
+	      title: value[1],
+	      year: value[2],
+	      country: value[3],
+	      release: value[4],
+	      genres: value[5],
+	      time: value[6],
+	      rating: value[7],
+	      director: value[8],
+	      starring: value[9]
+	    }
+end
+
+def search(str, field = :title)
+	filter = @movies.select do |key, value|
+		value[field].downcase.include? str.downcase
+	end
+
+# Рейтинг нужно вывести количеством звёздочек. Поскольку у всех фильмов в топ-250 рейтинг больше 8,
+#то количество звёздочек должно соответствовать десятым долям рейтинга выше восьмёрки (для рейтинга «8.6» должна рядом с названием быть выведена строка ******, для 9.2 — соответственно, ************)
+	filter.each do |key, value|
+	    rating = ((value[:rating].to_f.ceil - value[:rating].to_f)*10).to_i
+	    puts "#{value[:title]} #{"".ljust(rating, "*")}"
+	end
+end
+
+search "Max"
