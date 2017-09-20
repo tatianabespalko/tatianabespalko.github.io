@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+h3 { cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="box">
+    <h3><span>Список №1+</span></h3>
+    <ul>
+        <li>Пункт №1</li>
+        <li>Пункт №2</li>
+        <li>Пункт №3</li>
+        <li>Пункт №4</li>
+    </ul>
+</div>
+<div class="box">
+    <h3><span>Список №2+</span></h3>
+    <ul>
+        <li>Пункт №5</li>
+        <li>Пункт №6</li>
+        <li>Пункт №7</li>
+        <li>Пункт №8</li>
+    </ul>
+</div>
+<script>
+$(document).ready(function(){
+$("ul").hide();
+$("h3 span").click(function(){
+$(this).parent().next().slideToggle();
+});
+}); 
+</script>
+</body>
+</html>

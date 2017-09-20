@@ -1,0 +1,42 @@
+body{
+	background-color: #808080;
+	margin: 0;
+	padding: 0;
+	font: 1em/1.4em sans-serif
+}
+
+a{text-decoration: none;}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*Внешний вид меню*/
+.side{
+	width: 200px;
+	margin: 20px;
+}
+.menu a{
+	background-color: #FFFFFF;
+	color: #000;
+	padding: 10px;
+	display: block;
+	border-bottom: 1px solid #FFFAFA;
+	transition: 0.5s all;
+}
+.menu_list{
+	position: relative;
+}
+
+.menu_drop{
+	position: absolute;
+	opacity: 0;
+}
+.menu a:hover{
+	background: #DCDCDC;
+	padding: 10px 0 10px 20px;
+}
+
+/*Всплывающее меню*/
