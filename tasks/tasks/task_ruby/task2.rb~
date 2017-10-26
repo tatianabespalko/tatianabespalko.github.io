@@ -7,10 +7,15 @@
 #- вивести результaт -  вивести в термінал
 
 # ввести через термінал
+puts "Please, enter the number:"
+a = gets
+puts "The number is " + a
 
 # одна змінна з масивом
-a = gets.to_i
-p a.select{ |a| a%2 == 0 }.size
+enum.all? [{ |obj| block } ]
+enum.find_all { | obj | block }
+(1..10).find_all {|i|  i % 3 == 0 }
+
 #array.find_all{ |elem| elem % 2 == 0 }
 
 # що проходить по елементам з однією змінною масиву each 
@@ -24,6 +29,5 @@ p a.select{ |a| a%2 == 0 }.size
 
 # вивести в термінал
 #puts "The odd numbers is "
-#puts "The even numbers is "
+puts "The even numbers is "
  
-# [a].select { |num|  num.even?  }   
