@@ -82,3 +82,121 @@
 #	return "It's an empty string!" if string.empty?
 #	return "The string is nonempty."
 #end
+
+# chapter 4.3
+#Массив - список элементов в определенном порядке.
+#puts "[foo bar     baz]".split 
+
+#a = [42, 8, 17]
+#puts a[0]
+#puts a[1]
+#puts a[2]
+#puts a[-1]
+#puts a
+#puts a.first
+#puts "fooxbarxbazx".split('x')
+#puts a.second # The second method used here isn’t currently part of Ruby itself, but rather is added by Rails. It works in this case because the Rails console automatically includes the Rails extensions to Ruby.
+#puts a.last
+#puts a.last == a[-1]
+
+#puts x = a.length
+#puts x == 3
+#puts x == 1
+#puts x !=1
+#puts x >= 1
+#puts x < 1
+
+#puts a.sort
+#puts a.reverse
+#puts a.shuffle
+
+#puts a.sort! # “bang” methods - изменяет массив
+#puts a
+
+#puts a.push(6)
+#puts a << 7
+#puts a << "foo" << "bar"
+#puts a
+#puts a.join
+#puts a.join(', ')
+
+#puts (0..9).to_a.join   
+#puts a = %w[foo bar baz quux]
+#puts a[0..2]
+#puts a[2..(a.length-1)] 
+#puts a[2..-1]
+
+#puts ('a'..'e').to_a
+
+#puts (1..5).each { |i| puts 2 * i }
+#>>(1..5).each do |i|
+#?>   puts 2 * i
+#>> end
+
+#3.times { puts "Betelgeuse!" }
+#puts (1..5).map { |i| i**2 }    # Нотация ** обозначает 'степень'.
+#puts %w[a b c]                  # Вспомните что %w создает массив строк.
+#puts %w[a b c].map { |char| char.upcase }
+#puts %w[A B C].map { |char| char.downcase }
+# puts ('a'..'z').to_a.shuffle[0..7].join
+
+#puts ('a'..'z').to_a.join            # Перемешиваем его.
+#puts('a'..'z').to_a.shuffle.join     # Перемешиваем его.
+#puts ('a'..'z').to_a.shuffle[0..7]   # Вытаскиваем первые восемь элементов.
+
+#puts user = {}
+#user["first_name"] = "Tanya" 
+#user["last_name"] = "Bespalko"
+#user["first_name"] 
+#puts user
+#puts user = { "first_name" => "Michael", "last_name" => "Hartl" }
+
+#def string_shuffle(s)
+#s.split('').shuffle!.join
+#end
+
+# => :string_shuffle 
+
+#puts string_shuffle("foobar")
+# => "abforo"
+
+
+
+# Вирішення Задачі № 1
+
+#def string_shuffle(s)
+#s.split('').shuffle!.join
+
+#a = s.split("")
+#a.shuffle!
+#a.join
+
+#end
+
+# => :string_shuffle 
+#puts string_shuffle("foobar")
+
+# => "abforo"
+
+class String
+	def shuffle
+		self.split('').shuffle.join
+	end
+end
+
+
+puts "foolbar".shuffle
+
+
+#class String
+#	def shuffle
+#		String [self.split('')].reverse
+#	end
+#end
+
+#puts "foobar".shuffle
+
+#puts ('a'..'z').to_a.join
+#puts ('a'..'z').to_a.shuffle.join
+#puts ('a'..'z').to_a.shuffle[0..7].join
+
